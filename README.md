@@ -1,18 +1,18 @@
-# Getting Started with Create React App
+# pr-dasboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
 
-## Available Scripts
+Welcome!
+Be able to easily view all open pull requests.
+Click on the button to open each one on a new tab to review, comment and merge.
 
-In the project directory, you can run:
+## Contributing
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## FAQ
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Runbook
 
 ### `npm test`
 
