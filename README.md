@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# pr-dasboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Be able to easily view all open pull requests.
 
-## Available Scripts
+PR Dashboard unite all the PRs under your github repositories into a single page, in that sense you don't have to hunt down the open requests that are waiting for review. 🕵️‍♂️
 
-In the project directory, you can run:
+Click on the button to open each one on a new tab to review, comment and merge.
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First thing first, you clone the repository:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+    git clone https://github.com/b-a-b-e-l/pr-dashboard.git
+```
 
-### `yarn test`
+and simply initiate the server on your machine by: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+    yarn start
+```
 
-### `yarn build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To be able to access your repositories from github, we need your permission... To do that you have to generate a "GitHub Personal Access Token" with "repo" and "user" access, once the token was create, you might need to enable "SSO" in case you have some repositories under "SSO" authentication.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After that, you will be able to add new repositories either by pasting the full-url or just the repo name. Everything is store inside localStorage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `yarn eject`
+First of all, thank you for expressing interest into contributing on this initiative!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Below you can find step by step how to initiate a contribution:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Step by step
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Open an issue on the repository explaining what is the contribution idea / goal.
+2. Fork this repository [here.](https://github.com/b-a-b-e-l/pr-dashboard.git)
+3. Clone the forked repository to your local machine.
+4. Create a branch with the number or the issue created on step 01.
+5. Edit the part of the code that you would like to contribute.
+6. Commit your changes and push the new branch.
+7. Open and submit a Pull Request.
+8. Make sure that your PR follows the [Acceptanc criteria](#acceptance-criteria)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you need any help, feel free to raise an issue with a question.
 
-## Learn More
+## Acceptance criteria
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Each PR submited must contain the following before merge:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- E2E Tests (if applicable)
+- Unit Tests (if applicable)
+- Lint rules applied
+- The PR must be approved at least by one maintainer
+- Be following the [branching strategy](#branch-strategy)
 
-### Code Splitting
+## Branch Strategy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- feat/{issue_number} -> features
+- fix/{issue_number} -> fixes / bug fixes
+- hot/{issue_number} -> hotfixes
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To deploy this project into server or system you can run:
 
-### Making a Progressive Web App
+```
+    yarn build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## FAQ
 
-### Advanced Configuration
+- Where can I generate a "GitHub Personal Access Token"?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can generate the token by accessing your **GitHub Settings** page, then search for **Developer settings** on the left menu and then click into **Personal Access Tokens**.
 
-### Deployment
+On the top you will be able to see a button called **"Generate new token"**, you can click it to generate your Personal Access token.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Please make sure to check the "repo" and "user" access checkboxes 😉
 
-### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Runbook
+
+To run this project in your machine you must have **NPM v12** installed and **yarn**.
+
+After setting up the requirements, you can run the following script in your terminal on the root of the project:
+
+```
+    yarn start
+```
+
+## Testing
+
+To run the test you can run the following command into the root of the project
+
+```
+    yarn test
+```
