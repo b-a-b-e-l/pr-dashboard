@@ -1,41 +1,30 @@
 {
-    "include": ["./*.ts", "src"],
-
-    "compilerOptions": {
-      // Target latest version of ECMAScript.
-      "target": "esnext",
-
-      // Search under node_modules for non-relative imports.
-      "moduleResolution": "node",
-
-      "skipLibCheck": true,
-
-      "jsx": "react",
-
-      // Standard useful settings
-      "resolveJsonModule": true,
-
-      // Import non-ES modules as default imports.
-      "esModuleInterop": true,
-
-      // Process & infer types from .js files.
-      "allowJs": true,
-      "checkJs": true,
-
-      // Enable strictest settings like strictNullChecks & noImplicitAny.
-      "strict": true,
-
-      // As we're checking JS, this would be too strict
-      "noImplicitAny": false,
-
-      // Allows iterating over iterables (no idea why this isn't on by default!)
-      "downlevelIteration": true,
-
-      // Don't emit; allow Babel to transform files.
-      // We're only typechecking, not compiling
-      "noEmit": true,
-
-      // Disallow features that require cross-file information for emit.
-      "isolatedModules": true
-    }
+  "include": [
+    "./*.ts",
+    "src"
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "downlevelIteration": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext"
+  }
 }
