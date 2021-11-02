@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.a`
+const StyledButton = styled.button`
   background-color: #7bebd4;
   border-radius: 13px;
   border: 1px solid #000000;
@@ -12,8 +12,15 @@ const StyledButton = styled.a`
   }
 `;
 
-const Button: React.FC = () => {
-  return <StyledButton href="#">Click!</StyledButton>;
+interface Props {
+  label: string;
+  onClick: () => void;
+}
+
+const Button: React.FC<Props> = (props: Props) => {
+  const { label, onClick } = props;
+
+  return <StyledButton onClick={onClick}>{label}</StyledButton>;
 };
 
 export default Button;
